@@ -24,4 +24,9 @@
 
 //8. Difference between let var and const
 //9. What is Destructuring in Javascript
+//10. Shallow Copy and Deep Copy in JavaScript - Using Object.assign({}, objectname)
+// Shallow Copy Syntax - (...objectname)
+// Deep Copy Syntax - JSON.parse(JSON.stringify(objectname));
+// How to cut array length in JavaScript - Using splice()
+// What is Use Strict Mode in JavaScript
 

@@ -146,21 +146,57 @@ let [a,...rest] = arrD;
 // Old way
 x = 10;
 y = 20;
-temp = x;
-x=y;
-y= temp;
+// temp = x;
+// x=y;
+// y= temp;
 
 //console.log(x);
 //console.log(y);
 // With Destructuring Sway number
 [y,x] = [x,y];
-console.log(x);
-console.log(y);
+//console.log(x);
+//console.log(y);
 
+//Shallow Copy and Deep Copy in JavaScript
+// One Way using assign method
+const originalObj = {
+      name : 'Krishna'
+}
+const shallowObj = Object.assign({},(originalObj)); // Shallow Copy
+shallowObj.name = 'Ram';
+//console.log(originalObj);
+//console.log(shallowObj);
 
+// 2nd way - Using (...objectname) - Destructuring
+const stundentName = {
+    name : 'Hemant',
+    age : 38
+}
+const stundentShallowCopy = {...stundentName}; // Shallow Copy
+stundentShallowCopy.name = 'Deepak';
+stundentShallowCopy.age = 35;
+//console.log(stundentName);
+//console.log(stundentShallowCopy);
 
+// Deep Copy
+let data = {
+    name : 'Shoeb',
+    address :{
+        city: 'Nagpur',
+    }
+}
 
+let deepCopy = JSON.parse(JSON.stringify(data));// Deep copy
+deepCopy.address.city = 'Pune';
+//console.log(data);
+//console.log(deepCopy);
 
+// How to cut array length in JavaScript
+let cutArr = [1,2,3,4,5,6];
+let res = cutArr.splice(2);
+console.log(res);
+
+// What is Use Strict Mode in JavaScript
 
 
 
